@@ -34,7 +34,7 @@ import static uk.co.real_logic.aeron.driver.Configuration.MTU_LENGTH_DEFAULT;
 /**
  * Benchmark used to calculate latency of underlying system.
  *
- * @see uk.co.real_logic.aeron.examples.raw.SendHackSelectReceiveUdpPing
+ * @see SendHackSelectReceiveUdpPing
  */
 public class SelectReceiveSendUdpPong
 {
