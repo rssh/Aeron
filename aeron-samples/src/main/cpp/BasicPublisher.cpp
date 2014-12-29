@@ -19,6 +19,14 @@
 #include "Configuration.h"
 #include <Aeron.h>
 #include <array>
+#include <atomic>
+#include <csignal>
+#include <memory>
+#include <cstdio>
+
+#ifdef _MSC_VER
+#define snprintf _snprintf
+#endif
 
 using namespace aeron::common::util;
 using namespace aeron;
@@ -93,7 +101,7 @@ int main (int argc, char** argv)
 
         for (int i = 0; i < settings.numberOfMessages && running; i++)
         {
-            const int messageLen = ::snprintf(message, sizeof(message), "Hello World! %d", i);
+            const int messageLen = snprintf(message, sizeof(message), "Hello World! %d", i);
 
             srcBuffer.putBytes(0, reinterpret_cast<std::uint8_t *>(message), messageLen);
 

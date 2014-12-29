@@ -18,6 +18,7 @@
 #define INCLUDED_AERON_SUBSCRIPTION__
 
 #include <iostream>
+#include <cstdint>
 
 namespace aeron {
 

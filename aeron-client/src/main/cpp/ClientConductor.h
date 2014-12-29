@@ -19,6 +19,7 @@
 
 #include <concurrent/logbuffer/LogReader.h>
 #include <vector>
+#include <mutex>
 #include "Publication.h"
 #include "Subscription.h"
 

@@ -19,7 +19,9 @@
 
 #include <util/Index.h>
 #include <concurrent/AtomicBuffer.h>
+#include <algorithm>
 #include "LogBufferDescriptor.h"
+
 
 namespace aeron { namespace common { namespace concurrent { namespace logbuffer {
 

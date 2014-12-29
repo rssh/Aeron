@@ -22,6 +22,7 @@
 #include <thread>
 #include <mintomic/mintomic.h>
 
+
 namespace aeron { namespace common { namespace common {
 
 class BusySpinIdleStrategy
@@ -44,7 +45,11 @@ public:
     inline static void pause()
     {
 #if MINT_CPU_X86 || MINT_CPU_X64
+# ifdef _MSC_VER
+		__asm  { pause };
+# else
         asm volatile("pause");
+# endif
 #else
         #error Unsupported platform!
 #endif

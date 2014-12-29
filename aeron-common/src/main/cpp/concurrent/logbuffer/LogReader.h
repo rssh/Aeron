@@ -19,6 +19,7 @@
 
 #include <util/Index.h>
 #include <concurrent/AtomicBuffer.h>
+#include <functional>
 #include "LogBufferDescriptor.h"
 #include "LogBuffer.h"
 #include "Header.h"
